@@ -1,6 +1,5 @@
 # sbom-service
 
-
 ## Run in Docker
 
 Database configures, such as *host/port/db_name* are passed to the container via
@@ -22,3 +21,8 @@ Sensitive data, such as *password*, are passed by *docker secret*.
     -e DB_PASSWORD_FILE="/run/secrets/db_password" \
     sbom-service
     ```
+
+# sbom-website
+
+1. `docker build -t sbom-website .`
+2. `docker run -d -p 8080:8080 sbom-website`
